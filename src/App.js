@@ -231,8 +231,8 @@ const App = () => {
       <div className={walletAddress ? "authed-container" : "container"}>
         {" "}
         <div className="header-container">
-          <p className="header">🖼 One Piece ZORO</p>
-          <p className="sub-text">View ZORO gifs in kingdom of Wano✨</p>
+          <p className="header">🖼 Anime-themed GIFs</p>
+          <p className="sub-text">View popular anime GIFs✨</p>
           {/* Add the condition to show this only if we don't have a wallet address */}
           {!walletAddress && renderNotConnectedContainer()}
           {walletAddress && renderConnectedContainer()}
