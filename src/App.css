@@ -108,8 +108,10 @@
 .gif-item img {
   width: 100%;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 50px;
   object-fit: cover;
+  border-style: solid;
+  border-color: white;
 }
 
 .connected-container input[type='text'] {

@@ -1,0 +1,91 @@
+{
+  "version": "0.1.0",
+  "name": "hello_world",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "baseAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "update",
+      "accounts": [
+        {
+          "name": "baseAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "gifLink",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "BaseAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "totalGifs",
+            "type": "u64"
+          },
+          {
+            "name": "gifList",
+            "type": {
+              "vec": {
+                "defined": "ItemStruct"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "ItemStruct",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "gifLink",
+            "type": "string"
+          },
+          {
+            "name": "userAddress",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "2A8nZ7HJJbK4fBUmgrZfcKSj4pwvHdWfXmjzT8aNocUe"
+  }
+}
